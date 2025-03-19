@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline';">
+    <title>File Transfer</title>
+   <link rel="stylesheet" href="style.css">
+ </head>
+
+<body>
+    <h2>Select a File to Upload</h2>
+    <button id="selectFiles">Select File</button>
+    <ul id="fileList"></ul>
+
+    <div id="filenameDisplay">Your file will be saved as: <span id="filenameDisplay-file"></span></div> <!-- Display the new file name here -->
+
+
+    <button id="moveFiles" disabled>Upload File</button>
+
+
+    <!-- Modal for file name input -->
+    <div id="filenameModal">
+        <div id="filenameModalContent">
+            <form id="filenameModalForm">
+                <label for="fileNameInput">Enter Filename (with extension):</label>
+                <input type="text" id="fileNameInput" placeholder="e.g. file.txt" required autofocus autocomplete="off">
+                <button type="submit" id="submitFilename">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Sheet Selection -->
+<div id="sheetSelectionModal" style="display: none;">
+    <div id="selectionForm">
+        <label for="sheetSelect">Select a worksheet:</label>
+    <select id="sheetSelect"></select>
+    <button id="confirmSheet">Select</button>
+    </div>
+    
+</div>
+
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>

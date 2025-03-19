@@ -1,0 +1,255 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Header styling */
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #444;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding-left: 0;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+}
+
+li {
+    padding: 8px;
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal styling */
+#filenameModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+#filenameModalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: modal-fade-in 0.3s ease;
+}
+
+#filenameModalContent input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#filenameModalContent button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filenameModalContent button:hover {
+    background-color: #45a049;
+}
+
+/* Modal Fade-in Animation */
+@keyframes modal-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Filename Display */
+#filenameDisplay {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #1f0909f6;
+    text-align: center;
+}
+
+#filenameDisplay-file{
+     margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #1f0909f6;
+    text-align: center;
+    font-weight: bold; 
+   }
+
+/* Sheet Selection Modal Styling */
+#sheetSelectionModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+
+#selectionForm {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Light shadow for the form */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+#selectionForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#selectionForm select,
+#selectionForm button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#selectionForm button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#selectionForm button:hover {
+    background-color: #45a049;
+}
+#sheetSelectionModalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: modal-fade-in 0.3s ease;
+}
+
+#sheetSelectionModal label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #080808;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#sheetSelectionModal select {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+#sheetSelectionModal button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 200px;
+    margin: 10px;
+}
+
+#sheetSelectionModal button:hover {
+    background-color: #45a049;
+}
+
+#sheetSelectionModal button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

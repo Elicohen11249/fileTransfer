@@ -1,0 +1,21 @@
+{
+  "name": "datapipe-transfer",
+  "productName": "Electron file transfer app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^35.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron-packager": "^17.1.2"
+  }
+}
